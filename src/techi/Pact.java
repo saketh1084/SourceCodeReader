@@ -32,24 +32,24 @@ public class Pact {
                     continue;
                 }
 
-                // Exclude single-line comments
+                
                 if (line.startsWith("//")) {
                     continue;
                 }
 
-                // Exclude start of multi-line comment
+              
                 if (line.startsWith("/*")) {
                     inCommentBlock = true;
                     continue;
                 }
 
-                // Exclude end of multi-line comment
+              
                 if (line.endsWith("*/")) {
                     inCommentBlock = false;
                     continue;
                 }
 
-                // Exclude lines within multi-line comment
+                
                 if (inCommentBlock) {
                     continue;
                 }
